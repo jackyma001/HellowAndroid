@@ -1,0 +1,32 @@
+package com.jacky;
+import android.app.ListActivity;
+import android.database.DatabaseUtils;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+
+public class WordList  extends ListActivity {
+	private SQLiteDatabase mSQLiteDatabase = null;
+	@Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
+        String[] wordLists = new String[this.getListNumber()];
+        for (int i = 0; i < wordLists.length; i++)
+        {
+        	wordLists[i]= "List"+ i;
+        }
+        setListAdapter(new ArrayAdapter<String>(this,
+        		android.R.layout.simple_list_item_1, wordLists));   
+        getListView().setTextFilterEnabled(true);
+	}
+
+	private int getListNumber()
+	{
+		mSQLiteDatabase = new DatabaseManager(this).openDatabase();
+		long totalWords= DatabaseUtils.queryNumEntries(mSQLiteDatabase, "dic");       
+        int wordPerDays = 50;
+        int listNums =  (int) Math.ceil((double)totalWords/wordPerDays);
+        return listNums;
+	}
+}

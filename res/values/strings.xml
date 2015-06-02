@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, pp</string>
+    <string name="app_name">单词王</string>
+    <string name="new_game">New Game</string>
+    <string name="help">Help me please</string>
+    <string name="plan">按学习计划</string>
+    <string name="level">按难度</string>
+    <string name="start">开始</string>
+</resources>

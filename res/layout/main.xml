@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/linearLayout1" 
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent" 
+	android:orientation="vertical"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<Button android:text="单词列表" 
+    	android:id="@+id/btnWordList" 
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content">
+    </Button>
+    <Button android:text="开始学习" 
+    	android:id="@+id/btnStudy" 
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content">
+    </Button>
+     <Button android:text="听单词模式" 
+    	android:id="@+id/btnVoidStudy" 
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content">
+    </Button>
+    <Button android:text="制定计划" 
+    	android:id="@+id/btnPlan" 
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content">
+    </Button>
+    <Button android:text="生词本" 
+    	android:id="@+id/btnNewWrod" 
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content">
+    </Button>
+    
+</LinearLayout>
